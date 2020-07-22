@@ -1,6 +1,7 @@
 package service;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -38,7 +39,16 @@ public class PedidosService {
 					return true;
 				}
 			}
-		} catch(IOException e) {
+		} 
+		catch(FileNotFoundException ex) {
+			try(PrintStream salida=new PrintStream(RUTA)){
+				
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+		catch(IOException e) {
 			e.printStackTrace();
 		}
 		return false;

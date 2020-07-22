@@ -56,8 +56,7 @@ public class GestionNotas {
 	{
 		sc = new Scanner(System.in);
 		System.out.print("Ingresar nota: ");
-		notas.agregarNota(Double.parseDouble(sc.nextLine()));
-		
+		notas.agregarNota(Double.parseDouble(sc.nextLine()));	
 	}
 	
 	static void calcularMedia (NotasService notas) 
